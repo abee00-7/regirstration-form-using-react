@@ -16,7 +16,7 @@ function RegistrationForm() {
     const { name, value } = e.target;
 
     
-    if (name === 'mobile' && value.length > 10) {
+    if (name === 'mobile' && value.length == 10) {
       return; 
     }
 
@@ -33,9 +33,17 @@ function RegistrationForm() {
       alert("Please fill out all fields");
       return;
     }
+  
    
-    alert("Registration completed!!")
+    if (formData.mobile.length !== 10 || !/^\d+$/.test(formData.mobile)) {
+      alert("Mobile number must be 10 digits");
+      return;
+    }
+  
+   
+    alert("Registration successfull!!");
   };
+  
 
   const handleReset = () => {
    

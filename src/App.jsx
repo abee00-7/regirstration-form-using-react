@@ -15,10 +15,6 @@ function RegistrationForm() {
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    
-    if (name === 'mobile' && value.length == 10) {
-      return; 
-    }
 
     setFormData({
       ...formData,
